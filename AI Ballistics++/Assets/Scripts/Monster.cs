@@ -73,8 +73,14 @@ public class Monster : MonoBehaviour
         SetSpeed(0f);
         isAttacking = true;
         animator.SetTrigger("Attack");
-        GameManager.Instance.HurtPlayer();
-        Invoke("ResetAttack", 2f);
+        Invoke("HitPlayer", 2f);
+        Invoke("ResetAttack", 4f);
+    }
+
+    private void HitPlayer()
+    {
+        if (!isDead)
+            GameManager.Instance.HurtPlayer();
     }
 
     private void ResetAttack()

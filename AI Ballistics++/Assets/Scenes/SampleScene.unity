@@ -840,7 +840,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1199229274}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 1199229277}
   - component: {fileID: 1199229276}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LivesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1489,7 +1489,7 @@ GameObject:
   - component: {fileID: 1328914499}
   - component: {fileID: 1328914498}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TutotialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2120,7 +2120,7 @@ GameObject:
   - component: {fileID: 1976130622}
   - component: {fileID: 1976130621}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DeathText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
