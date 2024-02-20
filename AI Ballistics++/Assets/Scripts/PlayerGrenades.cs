@@ -11,7 +11,7 @@ public class PlayerGrenades : MonoBehaviour
     {
         if (currentGrenade == null)
         {
-            Invoke("Reload", 1f);
+            Invoke("Reload", 3f);
         }
     }
 

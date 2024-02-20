@@ -4,12 +4,14 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public UnityEvent gameOver;
+    public UnityEvent showTutorial = new();
+    public UnityEvent hideTutorial = new();
+    public UnityEvent gameOver = new();
     [SerializeField] private Transform enemyTarget;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform enemySpawn;
     public int wave = 0;
-    [SerializeField] int hp = 3;
+    public int hp = 3;
     private bool isDead = false;
 
     public void HurtPlayer()
@@ -28,7 +30,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        InvokeRepeating("SpawnEnemy", 0f, 10f);
+        InvokeRepeating("SpawnEnemy", 3f, 10f);
+        showTutorial.Invoke();
+        Invoke("HideTutorial", 3f);
     }
 
     private void SpawnEnemy()
@@ -37,5 +41,10 @@ public class GameManager : MonoBehaviour
         Monster newMonster = Instantiate(enemyPrefab, enemySpawn.position, enemySpawn.rotation).GetComponent<Monster>();
         newMonster.SetTarget(enemyTarget);
         wave++;
+    }
+
+    private void HideTutorial()
+    {
+        hideTutorial.Invoke();
     }
 }

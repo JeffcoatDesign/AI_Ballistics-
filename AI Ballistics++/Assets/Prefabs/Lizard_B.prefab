@@ -354,7 +354,7 @@ MonoBehaviour:
   attackRange: 2
   maxHP: 3
   hp: 0
-  collider: {fileID: 1194179956794227764}
+  hitBox: {fileID: 1194179956794227764}
 --- !u!135 &1194179956794227764
 SphereCollider:
   m_ObjectHideFlags: 0

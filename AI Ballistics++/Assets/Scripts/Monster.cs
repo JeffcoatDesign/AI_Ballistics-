@@ -15,7 +15,7 @@ public class Monster : MonoBehaviour
     public float attackRange = 2f;
     public int maxHP = 3;
     public int hp;
-    public Collider collider;
+    public Collider hitBox;
     bool isDead = false;
     bool isAttacking = false;
     internal void GetHit()
@@ -37,7 +37,8 @@ public class Monster : MonoBehaviour
         isDead = true;
         SetSpeed(0f);
         animator.SetTrigger("Die");
-        collider.enabled = false;
+        hitBox.enabled = false;
+        agent.enabled = false;
     }
 
     public void SetTarget(Transform target)
